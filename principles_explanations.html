@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Principles Explanations with Examples</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #F7E7CE;
+      font-family: 'Cinzel', serif;
+    }
+    .card {
+      background: #FFFBF0;
+      position: relative;
+      padding: 2.5rem 2rem;
+      border-radius: 1.5rem;
+      border: 3px solid #D1BFA2;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.1), 0 10px 20px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+    .card::before, .card::after {
+      content: '';
+      position: absolute;
+      background: #FFFBF0;
+      border: 3px solid #D1BFA2;
+      border-radius: 0.6rem;
+      width: calc(100% - 3rem);
+      height: 1.2rem;
+      left: 1.5rem;
+    }
+    .card::before {
+      top: -0.75rem;
+    }
+    .card::after {
+      bottom: -0.75rem;
+    }
+    /* Paper folds at top edges */
+    .card .fold {
+      position: absolute;
+      width: 1.5rem;
+      height: 1rem;
+      background: #FFFBF0;
+      border: 3px solid #D1BFA2;
+      border-bottom: none;
+    }
+    .card .fold-left {
+      top: 0.5rem;
+      left: 1.5rem;
+      transform: skewY(10deg);
+    }
+    .card .fold-right {
+      top: 0.5rem;
+      right: 1.5rem;
+      transform: skewY(-10deg);
+    }
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    .card p {
+      margin-bottom: 0.5rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="w-full py-4 text-center text-lg tracking-wider">
+    <a href="index.html" class="mx-3 text-red-700 hover:text-red-900 font-semibold">Tablets</a>
+    <span class="text-gray-500">|</span>
+    <a href="principles_explanations.html" class="mx-3 text-red-700 hover:text-red-900 font-semibold">Explanations</a>
+  </nav>
+  <div class="container">
+    <header class="text-center mb-8" data-aos="fade-down">
+      <h1 class="text-4xl font-extrabold text-gray-800 tracking-wide">Code&nbsp;of&nbsp;Honor — Detailed&nbsp;Scrolls</h1>
+      <p class="text-lg text-gray-700 italic">Understand the spirit behind each principle</p>
+    </header>
+    
+    <!-- Principles I -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Principles I: 1–6</h2>
+      
+      <div class="card" data-aos="fade-up">
+        <span class="fold fold-left"></span>
+        <span class="fold fold-right"></span>
+        <h2>1. Fairness</h2>
+        <p><strong>Meaning:</strong> Impartial treatment and equal opportunity for everyone.</p>
+        <p><strong>Example:</strong> In the workplace, ensuring all team members have an equal chance to present ideas during meetings.</p>
+      </div>
+      
+      <div class="card" data-aos="fade-up">
+        <h2>2. Equity</h2>
+        <p><strong>Meaning:</strong> Tailoring support to individual needs to achieve true fairness.</p>
+        <p><strong>Example:</strong> Providing extra training to new employees so they can compete equitably with experienced team members.</p>
+      </div>
+      
+      <div class="card" data-aos="fade-up">
+        <h2>3. Justice</h2>
+        <p><strong>Meaning:</strong> Ensuring everyone gets what they deserve under consistent rules.</p>
+        <p><strong>Example:</strong> A judge applying the law equally to all parties in a trial.</p>
+      </div>
+      
+      <div class="card" data-aos="fade-up">
+        <h2>4. Integrity</h2>
+        <p><strong>Meaning:</strong> Adherence to moral principles in every situation, even when it is difficult.</p>
+        <p><strong>Example:</strong> A person admitting their mistake at work instead of hiding it, even if it might have personal consequences.</p>
+      </div>
+      
+      <div class="card" data-aos="fade-up">
+        <h2>5. Service</h2>
+        <p><strong>Meaning:</strong> Acting compassionately and working for the benefit of others.</p>
+        <p><strong>Example:</strong> Volunteering at a local shelter to help those in need.</p>
+      </div>
+      
+      <div class="card" data-aos="fade-up">
+        <h2>6. Excellence</h2>
+        <p><strong>Meaning:</strong> Consistently striving to perform at one’s best in every activity.</p>
+        <p><strong>Example:</strong> A student dedicating extra hours to study and master a challenging subject.</p>
+      </div>
+    </section>
+    
+    <!-- Principles II -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Principles II: 7–12</h2>
+      
+      <div class="card" data-aos="fade-up">
+        <h2>7. Growth</h2>
+        <p><strong>Meaning:</strong> Continual personal or professional development.</p>
+        <p><strong>Example:</strong> Taking additional courses to learn new skills or improve existing ones.</p>
+      </div>
+      
+      <div class="card" data-aos="fade-up">
+        <h2>8. Courage</h2>
+        <p><strong>Meaning:</strong> Facing fear and adversity with conviction and bravery.</p>
+        <p><strong>Example:</strong> Delivering a public speech despite experiencing stage fright.</p>
+      </div>
+      
+      <div class="card" data-aos="fade-up">
+        <h2>9. Humility</h2>
+        <p><strong>Meaning:</strong> Maintaining a modest view of one’s importance and achievements.</p>
+        <p><strong>Example:</strong> An expert giving credit to their team for a successful project.</p>
+      </div>
+      
+      <div class="card" data-aos="fade-up">
+        <h2>10. Industry</h2>
+        <p><strong>Meaning:</strong> Hard work, diligence, and a constant effort to improve.</p>
+        <p><strong>Example:</strong> An employee consistently going the extra mile to meet deadlines and achieve targets.</p>
+      </div>
+      
+      <div class="card" data-aos="fade-up">
+        <h2>11. Temperance</h2>
+        <p><strong>Meaning:</strong> Exercising self‑restraint and moderation in actions and behaviors.</p>
+        <p><strong>Example:</strong> Practicing moderation in spending habits even when money is abundant.</p>
+      </div>
+      
+      <div class="card" data-aos="fade-up">
+        <h2>12. Modesty</h2>
+        <p><strong>Meaning:</strong> Allowing one’s actions and achievements to speak for themselves without boastfulness.</p>
+        <p><strong>Example:</strong> Letting the quality of your work attract attention, rather than overtly promoting yourself.</p>
+      </div>
+    </section>
+  </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init({duration:800, once:true});</script>
+</body>
+</html>
