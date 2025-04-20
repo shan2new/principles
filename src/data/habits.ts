@@ -2,6 +2,33 @@ import { Group } from '@/types';
 
 export const groups: Group[] = [
   {
+    name: '📜 Fundamental Principles',
+    habits: [
+      {
+        title: 'Fundamental Principles',
+        categories: [
+          {
+            name: 'Core Principles',
+            principles: [
+              { name: 'Fairness', desc: 'Impartial treatment and equal opportunity.' },
+              { name: 'Equity', desc: 'Tailored support to achieve true fairness.' },
+              { name: 'Justice', desc: 'Giving each their due under consistent standards.' },
+              { name: 'Integrity', desc: 'Unwavering adherence to moral principles.' },
+              { name: 'Service', desc: 'Acting compassionately to benefit others.' },
+              { name: 'Excellence', desc: 'Consistently doing one’s best work.' },
+              { name: 'Growth', desc: 'Ongoing development of one’s capabilities.' },
+              { name: 'Courage', desc: 'Facing fear and adversity with conviction.' },
+              { name: 'Humility', desc: 'Maintaining an accurate, modest self‑view.' },
+              { name: 'Industry', desc: 'Diligent, focused effort toward useful work.' },
+              { name: 'Temperance', desc: 'Self‑restraint and moderation in actions.' },
+              { name: 'Modesty', desc: 'Letting character speak without ostentation.' }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     name: '🔒 Private Victory (Habits 1–3)',
     habits: [
       {
