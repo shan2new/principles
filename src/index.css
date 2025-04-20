@@ -1,15 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Import additional Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=JetBrains+Mono:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Uncial+Antiqua&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
-
 :root {
   /* Font settings */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-display: 'Fraunces', Georgia, serif;
+  --font-display: 'Cinzel Decorative', serif;
   --font-mono: 'JetBrains Mono', monospace;
   
   font-family: var(--font-sans);
@@ -313,5 +308,15 @@ button:focus-visible {
   }
   .motion-safe\:translate-y-0 {
     transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  @keyframes flicker {
+    0%, 100% { opacity: 1; transform: scale(1) translateY(0); }
+    50%      { opacity: 0.7; transform: scale(1.1) translateY(-2px); }
+  }
+  .flame {
+    animation: flicker 1s infinite alternate ease-in-out;
   }
 }
