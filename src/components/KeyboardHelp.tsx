@@ -19,30 +19,34 @@ export default function KeyboardHelp() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-8 right-8 p-4 bg-card rounded-lg shadow-lg border border-border/50 max-w-sm">
-      <h4 className="font-semibold mb-2">Keyboard Shortcuts</h4>
-      <ul className="space-y-2 text-sm text-muted-foreground">
-        <li className="flex items-center gap-2">
-          <kbd className="px-2 py-1 bg-accent rounded text-xs">↑</kbd>
-          <kbd className="px-2 py-1 bg-accent rounded text-xs">k</kbd>
-          <span>Previous section</span>
+    <div className="fixed bottom-8 right-8 p-6 bg-card rounded-lg shadow-lg border border-border/50 max-w-sm backdrop-blur-sm">
+      <h4 className="font-display text-lg font-bold tracking-tight mb-4 text-foreground/90">Keyboard Shortcuts</h4>
+      <ul className="space-y-3 text-[15px] leading-relaxed text-foreground/70">
+        <li className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            <kbd className="font-mono px-2 py-1 bg-accent/20 rounded text-xs font-medium tracking-wide text-accent-foreground/90">↑</kbd>
+            <kbd className="font-mono px-2 py-1 bg-accent/20 rounded text-xs font-medium tracking-wide text-accent-foreground/90">k</kbd>
+          </div>
+          <span className="font-sans font-medium tracking-tight">Previous section</span>
         </li>
-        <li className="flex items-center gap-2">
-          <kbd className="px-2 py-1 bg-accent rounded text-xs">↓</kbd>
-          <kbd className="px-2 py-1 bg-accent rounded text-xs">j</kbd>
-          <span>Next section</span>
+        <li className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            <kbd className="font-mono px-2 py-1 bg-accent/20 rounded text-xs font-medium tracking-wide text-accent-foreground/90">↓</kbd>
+            <kbd className="font-mono px-2 py-1 bg-accent/20 rounded text-xs font-medium tracking-wide text-accent-foreground/90">j</kbd>
+          </div>
+          <span className="font-sans font-medium tracking-tight">Next section</span>
         </li>
-        <li className="flex items-center gap-2">
-          <kbd className="px-2 py-1 bg-accent rounded text-xs">Home</kbd>
-          <span>Jump to first section</span>
+        <li className="flex items-center gap-3">
+          <kbd className="font-mono px-2 py-1 bg-accent/20 rounded text-xs font-medium tracking-wide text-accent-foreground/90">Home</kbd>
+          <span className="font-sans font-medium tracking-tight">Jump to first section</span>
         </li>
-        <li className="flex items-center gap-2">
-          <kbd className="px-2 py-1 bg-accent rounded text-xs">End</kbd>
-          <span>Jump to last section</span>
+        <li className="flex items-center gap-3">
+          <kbd className="font-mono px-2 py-1 bg-accent/20 rounded text-xs font-medium tracking-wide text-accent-foreground/90">End</kbd>
+          <span className="font-sans font-medium tracking-tight">Jump to last section</span>
         </li>
-        <li className="flex items-center gap-2">
-          <kbd className="px-2 py-1 bg-accent rounded text-xs">?</kbd>
-          <span>Toggle this help dialog</span>
+        <li className="flex items-center gap-3">
+          <kbd className="font-mono px-2 py-1 bg-accent/20 rounded text-xs font-medium tracking-wide text-accent-foreground/90">?</kbd>
+          <span className="font-sans font-medium tracking-tight">Toggle this help dialog</span>
         </li>
       </ul>
     </div>

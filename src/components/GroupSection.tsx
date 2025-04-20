@@ -34,10 +34,10 @@ export default function GroupSection({ group }: { group: Group }) {
       className="mb-24 last:mb-12"
     >
       <div className="sticky top-0 z-10 py-8 -mx-4 px-4 bg-gradient-to-b from-background via-background/98 to-background/95 backdrop-blur-sm">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center">
+        <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-center bg-gradient-to-br from-primary/90 to-primary/70 bg-clip-text text-transparent">
           {group.name}
         </h2>
-        <div className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-border/30 to-transparent" />
+        <div className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
       </div>
       <div className="mt-12 space-y-6">
         {group.habits.map((h) => (

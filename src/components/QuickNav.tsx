@@ -54,9 +54,11 @@ export default function QuickNav() {
             variant={activeSection === group.name ? 'default' : 'outline'}
             size="sm"
             onClick={() => scrollToSection(group.name)}
-            className="text-left justify-start focus-visible:ring-2 focus-visible:ring-primary/50"
+            className="text-left justify-start font-display tracking-tight focus-visible:ring-2 focus-visible:ring-primary/50"
           >
-            {group.name}
+            <span className="text-sm font-medium tracking-tight leading-none">
+              {group.name}
+            </span>
           </Button>
         ))}
       </div>
