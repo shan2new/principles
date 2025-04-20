@@ -23,7 +23,7 @@ export const groups: Group[] = [
               { name: 'Temperance', desc: 'Self‑restraint and moderation in actions.' },
               { name: 'Modesty', desc: 'Letting character speak without ostentation.' }
             ]
-          }
+          },
         ]
       }
     ]
@@ -52,7 +52,7 @@ export const groups: Group[] = [
             ]
           },
           {
-            name: 'Four Human Endowments',
+            name: 'The 4 Human Endowments',
             principles: [
               {
                 name: 'Self‑Awareness',
