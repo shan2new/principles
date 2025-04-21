@@ -1,22 +1,19 @@
 import { useState, useCallback, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import DishonourHeader from '@/components/DishonourHeader';
 import DishonourSection from '@/components/DishonourSection';
 import Progress from '@/components/Progress';
 import ThemeToggle from '@/components/ThemeToggle';
 import SwipeFeedback from '@/components/SwipeFeedback';
-import { useKeyboardNav } from '@/lib/useKeyboardNav';
 import { useSwipeGesture } from '@/lib/useSwipeGesture';
 import { dishonourGroups } from '@/data/dishonour';
 import { Button } from '@/components/ui/button';
-import { AlertCircle, ArrowLeft } from 'lucide-react';
+import { AlertCircle, ArrowLeft, ExternalLink } from 'lucide-react';
 
 export default function Dishonour() {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [swipeDirection, setSwipeDirection] = useState<'left' | 'right' | null>(null);
   const navigate = useNavigate();
-  
-  useKeyboardNav(); // Reuse keyboard navigation
   
   // Display warning message about the content
   const [showWarning, setShowWarning] = useState(true);
@@ -103,7 +100,7 @@ export default function Dishonour() {
       </main>
 
       <footer className="mt-24 py-6 text-center text-sm text-muted-foreground border-t border-destructive/10">
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-4">
           <p className="flex items-center gap-2">
             <span>Remember: This is what <strong>not</strong> to do!</span>
           </p>
@@ -115,6 +112,17 @@ export default function Dishonour() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             <span>Return to Code of Honor</span>
           </Button>
+          
+          <div className="flex flex-wrap justify-center gap-3 items-center text-xs text-muted-foreground mt-4">
+            <span>© {new Date().getFullYear()} <a href="https://shan2new.in" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">
+              shan2new.in
+              <ExternalLink className="h-3 w-3" />
+            </a></span>
+            <span>•</span>
+            <Link to="/privacy" className="hover:text-primary hover:underline">Privacy Policy</Link>
+            <span>•</span>
+            <Link to="/terms" className="hover:text-primary hover:underline">Terms of Use</Link>
+          </div>
         </div>
       </footer>
     </div>

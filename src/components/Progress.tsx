@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useScrollHandler } from '@/lib/useScrollHandler';
 import { groups } from '@/data/habits';
 
 export default function Progress() {
   const [progress, setProgress] = useState(0);
-  const [sectionProgress, setSectionProgress] = useState<{[key: string]: number}>({});
+  const [, setSectionProgress] = useState<{[key: string]: number}>({});
   const [currentSection, setCurrentSection] = useState('');
   const [isVisible, setIsVisible] = useState(false);
 

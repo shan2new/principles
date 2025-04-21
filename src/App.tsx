@@ -4,23 +4,21 @@ import Header from '@/components/Header';
 import GroupSection from '@/components/GroupSection';
 import Progress from '@/components/Progress';
 import Navigation from '@/components/Navigation';
-import KeyboardHelp from '@/components/KeyboardHelp';
 import QuickNav from '@/components/QuickNav';
 import ThemeToggle from '@/components/ThemeToggle';
 import SwipeFeedback from '@/components/SwipeFeedback';
-import { useKeyboardNav } from '@/lib/useKeyboardNav';
 import { useSwipeGesture } from '@/lib/useSwipeGesture';
 import { groups } from '@/data/habits';
 import Dishonour from '@/pages/Dishonour';
+import Privacy from '@/pages/Privacy';
+import Terms from '@/pages/Terms';
 import { Button } from './components/ui/button';
-import { MoveRight } from 'lucide-react';
+import { MoveRight, ExternalLink } from 'lucide-react';
 
 function CodeOfHonor() {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [swipeDirection, setSwipeDirection] = useState<'left' | 'right' | null>(null);
   const [showScrollHint, setShowScrollHint] = useState(true);
-  
-  useKeyboardNav();
   
   // Hide scroll hint after initial scroll or 5 seconds
   useEffect(() => {
@@ -69,7 +67,6 @@ function CodeOfHonor() {
       <SwipeFeedback direction={swipeDirection} />
       <Header />
       <Navigation />
-      <KeyboardHelp />
       <QuickNav />
       
       {/* Link to Dishonour page */}
@@ -117,22 +114,29 @@ function CodeOfHonor() {
         </div>
       </main>
 
-      <footer className="mt-24 py-6 text-center text-sm text-muted-foreground">
-        <div className="flex flex-col items-center gap-2">
-          <p className="flex items-center gap-2">
-            <kbd className="px-2 py-1 text-xs bg-accent/30 rounded font-mono">?</kbd>
-            <span>for keyboard shortcuts</span>
-          </p>
+      <footer className="mt-24 py-6 text-center text-sm text-muted-foreground border-t border-primary/10">
+        <div className="flex flex-col items-center gap-4">
           <p className="text-xs text-muted-foreground/60">
-            Swipe left/right or use keyboard to navigate
+            Swipe left/right to navigate between sections
           </p>
           
-          <Link to="/dishonour" className="mt-4">
+          <Link to="/dishonour" className="mb-2">
             <Button variant="outline" size="sm" className="text-sm border-primary/20">
               <span>See what <strong>not</strong> to do: Code of Dishonour</span>
               <MoveRight className="ml-2 h-3 w-3" />
             </Button>
           </Link>
+
+          <div className="flex flex-wrap justify-center gap-3 items-center text-xs text-muted-foreground mt-4">
+            <span>© {new Date().getFullYear()} <a href="https://shan2new.in" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">
+              shan2new.in
+              <ExternalLink className="h-3 w-3" />
+            </a></span>
+            <span>•</span>
+            <Link to="/privacy" className="hover:text-primary hover:underline">Privacy Policy</Link>
+            <span>•</span>
+            <Link to="/terms" className="hover:text-primary hover:underline">Terms of Use</Link>
+          </div>
         </div>
       </footer>
     </div>
@@ -145,6 +149,8 @@ function App() {
       <Routes>
         <Route path="/" element={<CodeOfHonor />} />
         <Route path="/dishonour" element={<Dishonour />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
     </BrowserRouter>
   );
