@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import GroupSection from '@/components/GroupSection';
 import Progress from '@/components/Progress';
@@ -10,8 +11,11 @@ import SwipeFeedback from '@/components/SwipeFeedback';
 import { useKeyboardNav } from '@/lib/useKeyboardNav';
 import { useSwipeGesture } from '@/lib/useSwipeGesture';
 import { groups } from '@/data/habits';
+import Dishonour from '@/pages/Dishonour';
+import { Button } from './components/ui/button';
+import { MoveRight } from 'lucide-react';
 
-function App() {
+function CodeOfHonor() {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [swipeDirection, setSwipeDirection] = useState<'left' | 'right' | null>(null);
   const [showScrollHint, setShowScrollHint] = useState(true);
@@ -68,6 +72,17 @@ function App() {
       <KeyboardHelp />
       <QuickNav />
       
+      {/* Link to Dishonour page */}
+      <Link to="/dishonour" className="fixed top-4 right-20 z-50">
+        <Button 
+          variant="outline" 
+          className="glass-effect border-primary/20 shadow-md hover:shadow-lg transition-all duration-300 px-4"
+        >
+          <span>Code of Dishonour</span>
+          <MoveRight className="ml-2 h-4 w-4" />
+        </Button>
+      </Link>
+      
       {showScrollHint && (
         <div className="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 animate-bounce">
           <div className="glass-effect px-4 py-2 rounded-full flex items-center gap-2 shadow-lg">
@@ -111,9 +126,27 @@ function App() {
           <p className="text-xs text-muted-foreground/60">
             Swipe left/right or use keyboard to navigate
           </p>
+          
+          <Link to="/dishonour" className="mt-4">
+            <Button variant="outline" size="sm" className="text-sm border-primary/20">
+              <span>See what <strong>not</strong> to do: Code of Dishonour</span>
+              <MoveRight className="ml-2 h-3 w-3" />
+            </Button>
+          </Link>
         </div>
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<CodeOfHonor />} />
+        <Route path="/dishonour" element={<Dishonour />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
